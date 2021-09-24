@@ -96,6 +96,6 @@ https://github.com/mitchellh/vagrant-aws
 http://anzpiper.blogspot.com/2017/08/use-vagrant-to-deploy-to-aws.html
 
 ## Base de conhecimento <a name="ack"></a>
-Vagrant 
+[Vagrant](https://www.vagrantup.com/) - O Vagrant fornece o mesmo fluxo de trabalho de forma fácil, independentemente de sua função como desenvolvedor, operador ou designer. Ele aproveita um arquivo de configuração declarativo que descreve todos os seus requisitos de software, pacotes, configuração do sistema operacional, usuários e muito mais. 
 
-Amazon Web Service 
+[Amazon Web Service](https://aws.amazon.com/pt/what-is-aws/?nc1=f_cc) - A Amazon Web Services (AWS) é a plataforma de nuvem mais adotada e mais abrangente do mundo, oferecendo mais de 200 serviços completos de datacenters em todo o mundo. Milhões de clientes, incluindo as startups de crescimento mais rápido, grandes empresas e os maiores órgãos governamentais, estão usando a AWS para reduzirem seus custos, ficarem mais ágeis e inovarem mais rapidamente. 
