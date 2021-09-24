@@ -9,7 +9,7 @@
 5. [Base de conhecimento](#ack)
 
 ## Motivação <a name="motivacao"></a>
-O vagrant é uma ferramenta que possibilita a criação, configuração, destruição e reconstrução de ambientes de desenvolvimento e testes de infraestrutura. Geralmente utilizado em conjunto com softwares de virtualização, como virtual box, VMware e KVM. Porém com a necessidade de criar ambientes mais complexos e com consumo de poder computacional alto o computador hospedeiro pode não ser capaz de fornecer a configuração necessaria para rodar o ambiente. Para resolver este problema podemos investir em um computador mais potente ou de forma imediata em uma plataforma de serviços de computação em nuvem como a Amazon Web Service (AWS). 
+O vagrant é uma ferramenta que possibilita a criação, configuração, destruição e reconstrução de ambientes de desenvolvimento e testes de infraestrutura. Geralmente utilizado em conjunto com softwares de virtualização como virtual box, VMware e KVM. Porém com a necessidade de criar ambientes mais complexos e com consumo de poder computacional alto o computador hospedeiro pode não ser capaz de fornecer a configuração necessaria para rodar o ambiente. Para resolver este problema podemos investir em um computador mais potente ou de forma imediata em uma plataforma de serviços de computação em nuvem como a Amazon Web Service (AWS). 
 
 ## Descrição de arquivos <a name="file"></a>
 Vagrantfile - Descrição, configuração e provisionamento do ambiente.
