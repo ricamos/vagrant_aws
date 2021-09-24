@@ -92,6 +92,7 @@ $ vagrant destroy -f #Destrói todo ambiente.
 Ricardo Coelho
 
 https://github.com/mitchellh/vagrant-aws
+
 http://anzpiper.blogspot.com/2017/08/use-vagrant-to-deploy-to-aws.html
 
 ## Base de conhecimento <a name="ack"></a>
