@@ -14,6 +14,8 @@ O vagrant é uma ferramenta que possibilita a criação, configuração, destrui
 ## Descrição de arquivos <a name="file"></a>
 Vagrantfile - Descrição, configuração e provisionamento do ambiente.
 
+files/secret.yml - Arquivo para armazenamento de chaves de acesso ao AWS. Deve ser adicionado ao gitignore. Foi mantido exposto para exemplo didatico, porém as chaves expostas não são mais validas. Altere os valores da chave de acordo com sua configuração.
+
 ## Interação com o projeto <a name="interact"></a>
 
 ### Preparação do ambiente

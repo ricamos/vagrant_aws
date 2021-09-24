@@ -1,6 +1,12 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
+# Chamando modulo YAML
+require 'yaml'
+
+aws = YAML.load_file('files/secret.yml')
+aws_secret = aws['configs'][aws['configs']['use']]
+
 class Hash
   def slice(*keep_keys)
     h = {}
@@ -15,8 +21,8 @@ end
 Vagrant.configure("2") do |config|
   config.vm.box = "dummy"
   config.vm.provider :aws do |aws, override|
-    aws.access_key_id = "AKIASIX4VFN7ZA45UZOB"
-    aws.secret_access_key = "IdevldVEJG/2uFmtujunplOFJ2/HzcgSstdzPLVx"
+    aws.access_key_id = aws_secret['AWSAccessKeyId']
+    aws.secret_access_key = aws_secret['AWSSecretKey']
     aws.region = "sa-east-1"
     aws.availability_zone = "sa-east-1a"
     aws.instance_type = "t2.micro"
