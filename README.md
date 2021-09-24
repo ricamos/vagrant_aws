@@ -32,7 +32,6 @@ $ vagrant box add dummy https://github.com/mitchellh/vagrant-aws/raw/master/dumm
 aws.access_key_id = "YOUR KEY"
 aws.secret_access_key = "YOUR SECRET KEY"
 ```
-
 Estas duas variaveis são preenchidas com chaves obtidas no [console do IAM](https://console.aws.amazon.com/iam) de sua conta AWS e devem ser mantidas em segredo. 
 
 #### [Amazon Machine Images (AMI)](https://docs.aws.amazon.com/pt_br/AWSEC2/latest/UserGuide/AMIs.html)
@@ -74,6 +73,12 @@ $ openssl rsa -in ~/.vagrant.d/insecure_private_key -pubout > vagrant.pub
 Ao invés de [criar um par de chaves usando o Amazon EC2](https://docs.aws.amazon.com/pt_br/AWSEC2/latest/UserGuide/ec2-key-pairs.html#having-ec2-create-your-key-pair) nós vamos usar a chave armazenada em vagrant.pub
 
 [Abra o console do Amazon EC2]( https://console.aws.amazon.com/ec2/) em Redes e segurança selecione pares de chaves. Em ações selecione importar pares de chaves e cole o conteúdo do arquivo vagrant.pub criado anteriormente. Em nosso exemplo nomeamos esta chave no console AWS como vagrant. 
+
+#### Interação com o ambiente.
+```
+$ vagrant up --provider=aws
+$ vagrant destroy -f
+```
 
 ## Autor e referências <a name="autor"></a>
 Ricardo Coelho
