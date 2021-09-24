@@ -32,11 +32,11 @@ $ vagrant box add dummy https://github.com/mitchellh/vagrant-aws/raw/master/dumm
 aws.access_key_id = "YOUR KEY"
 aws.secret_access_key = "YOUR SECRET KEY"
 ```
-Estas duas variaveis são preenchidas com chaves obtidas no [console do IAM](https://console.aws.amazon.com/iam) de sua conta AWS e devem ser mantidas em segredo. 
+Estas duas variaveis são preenchidas com chaves obtidas no [console do IAM](https://console.aws.amazon.com/iam) de sua conta AWS e devem ser mantidas em segredo. Crie um usuário com permissão de "AmazonEC2FullAccess" e crie as chaves de acesso.
 
 #### [Amazon Machine Images (AMI)](https://docs.aws.amazon.com/pt_br/AWSEC2/latest/UserGuide/AMIs.html)
 ```
-aws.ami = "ami-7747d01e"
+aws.ami = "ami-02e2a5679226e293c"
 
 ```
 Uma Imagem de máquina da Amazon (AMI) é um codigo que faz referência a uma imagem de um Sistema operacional da AWS.
@@ -72,12 +72,18 @@ $ openssl rsa -in ~/.vagrant.d/insecure_private_key -pubout > vagrant.pub
 
 Ao invés de [criar um par de chaves usando o Amazon EC2](https://docs.aws.amazon.com/pt_br/AWSEC2/latest/UserGuide/ec2-key-pairs.html#having-ec2-create-your-key-pair) nós vamos usar a chave armazenada em vagrant.pub
 
-[Abra o console do Amazon EC2]( https://console.aws.amazon.com/ec2/) em Redes e segurança selecione pares de chaves. Em ações selecione importar pares de chaves e cole o conteúdo do arquivo vagrant.pub criado anteriormente. Em nosso exemplo nomeamos esta chave no console AWS como vagrant. 
+[Abra o console do Amazon EC2]( https://console.aws.amazon.com/ec2/) em Redes e segurança selecione pares de chaves. Em ações selecione importar pares de chaves e cole o conteúdo do arquivo vagrant.pub criado anteriormente. Em nosso exemplo nomeamos esta chave no console AWS como vagrant.
+
+```
+aws.keypair_name = "vagrant"
+``` 
+Esta configuração diz respeito ao nome da chave criada anteriormente no console do Amazon EC2. Como criamos nossa chave com nome de vagrant, configuramos desta maneira.
 
 #### Interação com o ambiente.
 ```
-$ vagrant up --provider=aws
-$ vagrant destroy -f
+$ vagrant up --provider=aws #Cria o ambiente 
+$ vagrant up --debug --provider=aws #Cria o ambiente em modo debug.
+$ vagrant destroy -f #Destrói todo ambiente.
 ```
 
 ## Autor e referências <a name="autor"></a>
