@@ -2,8 +2,8 @@
 
 ## Sumário:
 
-1. [Motivation](#motivacao)
-2. [File description](#file)
+1. [Motivação](#motivacao)
+2. [Descrição de arquivos](#file)
 3. [Interação com o projeto](#interact)
 4. [Autor e referências](#autor)
 5. [Base de conhecimento](#ack)
@@ -12,7 +12,7 @@
 O vagrant é uma ferramenta que possibilita a criação, configuração, destruição e reconstrução de ambientes de desenvolvimento e testes de infraestrutura. Geralmente utilizado em conjunto com softwares de virtualização, como virtual box, VMware e KVM. Porém com a necessidade de criar ambientes mais complexos e com consumo de poder computacional alto o computador hospedeiro pode não ser capaz de fornecer a configuração necessaria para rodar o ambiente. Para resolver este problema podemos investir em um computador mais potente ou de forma imediata em uma plataforma de serviços de computação em nuvem como a Amazon Web Service (AWS). 
 
 ## Descrição de arquivos <a name="file"></a>
-Descrição e proposito dos arquivos do projeto
+Vagrantfile - Descrição, configuração e provisionamento do ambiente.
 
 ## Interação com o projeto <a name="interact"></a>
 
@@ -94,4 +94,5 @@ http://anzpiper.blogspot.com/2017/08/use-vagrant-to-deploy-to-aws.html
 
 ## Base de conhecimento <a name="ack"></a>
 Vagrant 
+
 Amazon Web Service 
